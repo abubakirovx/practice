@@ -25,3 +25,16 @@ result = math.ceil(34.2)  # CALL
 result2 = ceil(34.9)  # ceil tepada import bo'lgan
 print(result)
 print(result2)
+
+
+print("============ Error handling system ============")
+
+car_dict = dict(name="Toyota", year=2026, electric=True)
+
+try:
+    print('passed here')
+    result3 = car_dict["made_in"]
+    print(result3)
+except KeyError as err:
+    print('No made_in state property found',err)
+
