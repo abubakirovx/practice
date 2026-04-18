@@ -16,3 +16,6 @@ print(f"result : {result}")
 
 '''
 print(dir(__builtins__))
+
+
+
