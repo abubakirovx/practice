@@ -30,6 +30,7 @@ print(result)
 
 
 print("(====== Keyword & default arguments ======)")
+
 # DEFINE
 
 
@@ -39,8 +40,38 @@ def give_greet(name, age=22):
 
 
 # CALL
+
 result2 = give_greet(name="Huzuriy", age=20)
 print('result2=> ', result2)
 
 result3 = give_greet('Umar')
 print(result3)
+
+
+print("(====== Scope ======)")
+
+# DEFINE
+
+b = 100
+
+
+def calculate(a, b):
+    c = a*b
+    print(f"c value: {c}")
+
+
+# CALL
+calculate(3, 5)
+
+
+# b = 100  # 4
+
+
+# def cal(a):  # 3 defult
+#     # b = 700   #1
+#     c = a*b
+#     return c
+
+
+# result5 = cal(30)  # 2
+# print(f"result5 => {result5}")
