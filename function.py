@@ -27,3 +27,20 @@ greet("Umar")
 
 result = greeting("Ali")
 print(result)
+
+
+print("(====== Keyword & default arguments ======)")
+# DEFINE
+
+
+def give_greet(name, age=22):
+    print(f'give_greet function is executed')
+    return f"Hi {name},you are {age} years old!"
+
+
+# CALL
+result2 = give_greet(name="Huzuriy", age=20)
+print('result2=> ', result2)
+
+result3 = give_greet('Umar')
+print(result3)
