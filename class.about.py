@@ -1,7 +1,7 @@
 ''' CLASS
     (1) What is class ?
     (2) Ordinary vs static properties
-    (3) Special methods
+    (3) Special/magic methods
 '''
 
 print("==== What is class =====")
@@ -57,3 +57,46 @@ new_message = Person.message
 print(f"static message=> {new_message}")
 
 Person.explain()
+
+print("==== Special methods =====")
+
+# Python's most common special methods are below!
+# __init__ , __new__ , __str__ , __call__ __getitem__ , __eq__ , __len__ ...
+
+
+class Car():
+    # state
+    description = "This class makes cars"
+
+    # constructor
+    def __new__(cls, *args):
+        print("*__new__*")
+        return super().__new__(cls)
+
+    def __init__(self, car_name, year):
+        self.name = car_name
+        self.year = year
+
+    # method
+    def start_engine(self):
+        print(f"{self.name} is ready to drive -_-")
+
+    def stop_engine(self):
+        print(f"{self.name} stopped engine")
+
+    def __str__(self):
+        return f"{self.name} was produced {self.year}"
+
+    def __call__(self):
+        print("you call the method like a function")
+
+
+my_car = Car("Ferrari", 2025) 
+my_car.start_engine() #method 
+my_car.stop_engine() #method 😎
+about_car=Car.description #static
+print(about_car) #static
+my_car() #__call__
+print(my_car) #__str__
+your_car = Car("Cadilac", 2026)
+your_car.start_engine()
