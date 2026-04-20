@@ -89,14 +89,17 @@ class Car():
 
     def __call__(self):
         print("you call the method like a function")
+        return True
 
 
-my_car = Car("Ferrari", 2025) 
-my_car.start_engine() #method 
-my_car.stop_engine() #method 😎
-about_car=Car.description #static
-print(about_car) #static
-my_car() #__call__
-print(my_car) #__str__
+my_car = Car("Ferrari", 2025)
+my_car.start_engine()  # method
+my_car.stop_engine()  # method 😎
+about_car = Car.description  # static
+print(about_car)  # static
+my_car()  # __call__
+response = my_car()
+print("response=>", response)
+print(my_car)  # __str__
 your_car = Car("Cadilac", 2026)
 your_car.start_engine()

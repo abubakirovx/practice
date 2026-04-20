@@ -21,6 +21,7 @@ print(type(array))
 
 # Paradigm > Functional programming & OOP = Object-oriebted Programming
 # OOP 4 concepts > ABSTRACTION | ENCAPSULATION | INHERITANCE | POLIMARPHISM
+
 result = math.ceil(34.2)  # CALL
 result2 = ceil(34.9)  # ceil tepada import bo'lgan
 print(result)
