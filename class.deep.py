@@ -10,7 +10,7 @@ print("===== Encapsulation=====")
 
 class Account():
     # state
-    description = "This class makes bank account"\
+    description = "This class makes bank account"
 
     # constuctor
 
