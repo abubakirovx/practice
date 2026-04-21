@@ -43,3 +43,29 @@
 
 
 # home_check()
+
+# agar son musbat bo‘lsa → "positive"
+# agar manfiy bo‘lsa → "negative"
+# agar 0 bo‘lsa → "zero"
+
+# a = -1
+# if a == 0:
+#     print("zero")
+# elif a > 0:
+#     print("positive")
+# else:
+#     print("negative")
+
+# Car nomli class yoz:
+# brand
+# year
+# info() method bo‘lsin (print qilsin)
+
+class Car():
+    def __init__(self,brand,year):
+        self.__brand=brand
+        self.__year=year
+
+    def info(self):
+        print(f"the {self.__brand} was produced {self.__year}")
+        
