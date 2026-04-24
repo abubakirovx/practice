@@ -1,3 +1,4 @@
+// TASK A
 
 // function countNumber (word){
 //     let countedNumber=0
@@ -19,6 +20,8 @@
 
 
 
+
+// CHALLANGE
 
 // function findAnimal (txt){
 //     let count = 0
@@ -58,14 +61,58 @@
 // console.log("JAVOB=>",javob);
 
 
-function countString(word1,word2){
-    const word_1=word1.split("").sort().join('')
-    const word_2=word2.split("").sort().join('')
+
+// TASK B
+
+// function countString(word1,word2){
+//     const word_1=word1.split("").sort().join('')
+//     const word_2=word2.split("").sort().join('')
     
-    if(word_1===word_2) console.log("Matn bir xil");
+//     if(word_1===word_2) console.log("Matn bir xil");
     
-    else console.log("Matn bir xil emas");
+//     else console.log("Matn bir xil emas");
     
+// }
+
+// countString("salom","maloq")
+
+
+
+/*TASK D
+
+function getMaxIndex (arr){
+    let max = -Infinity
+    let indexMax =0
+    for(let i = 0;i<arr.length;i++){
+        if(arr[i]>max){
+            max = arr[i]
+            indexMax=i       
+        }
+        
+    }
+    return indexMax
 }
 
-countString("salom","maloq")
+const result = getMaxIndex([23,45,21,3,51,9,23])
+console.log(result);
+
+
+function getMaxIndex1 (arr){
+    let max = -Infinity
+    let indexMax =0
+    for(let num of arr){
+        if(num>max){
+            max = num
+            
+            indexMax=arr.indexOf(max)
+
+        }
+        
+    }
+    return indexMax
+}
+
+const result1 = getMaxIndex1([23,45,21,3,5,9,23])
+console.log(result1);
+*/
+
