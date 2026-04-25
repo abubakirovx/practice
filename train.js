@@ -116,3 +116,16 @@ const result1 = getMaxIndex1([23,45,21,3,5,9,23])
 console.log(result1);
 */
 
+
+/*E-TASK (NodeJS)
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"*/
+
+function getReverse(string){
+       let result= string.split("").reverse().join("")
+       return result
+}
+
+const result =getReverse("hello")
+console.log(result);

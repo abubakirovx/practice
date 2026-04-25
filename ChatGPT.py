@@ -96,6 +96,81 @@
 """
 
 
+# arr = [10, 20, 30, 40, 12]
+
+# arr.pop()
+
+# print(arr)  # [10, 20]  
+
+def richBankAtm():
+    balance = 0
+    print("Welcome to RBA (Rich Bank ATM) 🏦")
+
+    sighn = input("Press 0 to sign up 🛠️ : ")
+    if sighn != "0":
+        print("Wrong number ❌ try again !")
+        return
+
+    name = input("Please enter your fullname : ").title()
+    phone = input("Enter phone (+code) 📞 : ")
+    email = input("Enter email (without @gmail.com) 📩 : ") + "@gmail.com"
+    password = input("Enter password (min 4 chars) 🔐 : ")
+
+    if len(password) < 4:
+        print("Password too short ❌")
+        return
+
+    print(f"Hi 😊 {name}!")
+
+    # 🔁 LOOP boshlanadi
+    while True:
+        print("\nChoose service:")
+        print("1. Balance")
+        print("2. Withdraw")
+        print("3. Deposit")
+        print("4. Info")
+        print("5. Change password")
+        print("6. Exit")
+
+        option = input("Enter: ")
+
+        if option == "1":
+            print(f"Your balance: {balance} USD 💰")
+
+        elif option == "2":
+            amount = int(input("Enter withdraw amount: "))
+            if amount > balance:
+                print("Not enough balance ❌")
+            else:
+                balance -= amount
+                print(f"Withdrawn: {amount} USD 💰")
+
+        elif option == "3":
+            money = int(input("Enter deposit amount: "))
+            balance += money
+            print(f"Deposited: {money} USD 💰")
+
+        elif option == "4":
+            print(f"Name: {name}\nEmail: {email}\nPhone: {phone}")
+
+        elif option == "5":
+            current = input("Current password 🔑: ")
+            if current == password:
+                new_pass = input("New password 🔓: ")
+                if len(new_pass) >= 4:
+                    password = new_pass
+                    print("Password changed ✅")
+                else:
+                    print("Too short ❌")
+            else:
+                print("Wrong password ❌")
+
+        elif option == "6":
+            print(f"Goodbye {name} 👋")
+            break  # 🔥 loopni to‘xtatadi
+
+        else:
+            print("Invalid option ❌")
 
 
-
+richBankAtm()
