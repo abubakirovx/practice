@@ -16,8 +16,8 @@ for team in groups:
     print(f"the team {team}")
 
 # constuctor
-list = list("HEllo World")
-print(f"{list} and its size {len(list)}")
+new_list = list("HEllo World")
+print(f"{new_list} and its size {len(new_list)}")
 
 fruits = ["olma", "behi", "olcha", "gilos", "orik"]
 a = fruits[0]
@@ -91,3 +91,67 @@ numbers = [61, 23, 23, 34, 21, 5]
 sonlar = sorted(numbers)
 print(sonlar)
 print(numbers)
+
+print("============  Lambda ================")
+# lambda is small anonymous function!
+
+
+def calculate(a, b):
+    return a + b
+
+
+result = calculate(34, 65)
+print(result)
+
+people = [("Umar", 20), ("Ali", 22), ("Norman", 24), ("Huzuriy", 19), ("Buhoriy", 60)]
+
+people.sort()  # sort by name
+print("sort by name=>", people)
+
+# sort by age via lambda
+people.sort(
+    key=lambda person: person[1]
+)  # 1 index bu people ichida name emas ageni bildiradi
+print("sort by age=>", people)
+
+print("============ enumerate,map and filter ================")
+# enumerate for index & value
+
+animals = ["dog", "cat", "fish"]
+for element in enumerate(animals):
+    print("element", element)
+
+for index, value in enumerate(animals):
+    print(f"the index {index} the value is {value}")
+
+# similar in dictionaries
+car_obj = dict(brand="ferrari", year=2025)
+result = car_obj.items()
+# print(result)
+for key, value in result:
+    print(f"the key is {key} the value is {value}")
+
+
+
+
+# map
+print("========")
+
+cars = [("Ferrari", 78), ("Toyota", 87), ("Audi", 116), ("BMW", 109), ("Pegani", 33)]
+
+new_cars = []  # literal uslubda listdagi brandlarni olish
+for car in cars:
+    new_cars.append(car[0])
+print(new_cars)
+
+result1 = map(lambda car: car[0], cars)  # map orqali listdagi brandlarni olish
+new_cars = list(result1)
+print(new_cars)
+
+# list comprehension 
+result2 = [x[0] for x in cars]
+print("list comprehension =>", result2)
+
+# filter 
+result3=filter(lambda x:x[1]>100,cars)
+print("filter",list(result3))

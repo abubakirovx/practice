@@ -100,7 +100,8 @@
 
 # arr.pop()
 
-# print(arr)  # [10, 20]  
+# print(arr)  # [10, 20]
+
 
 def richBankAtm():
     balance = 0
@@ -174,3 +175,28 @@ def richBankAtm():
 
 
 richBankAtm()
+
+nums = [10, 15, 20, 25, 30]
+find = map(lambda x: x * 2, filter(lambda x: x > 20, nums))
+print(list(find))
+
+nums = [5, 10, 15, 20, 25, 30]
+get = map(lambda x: x * x, filter(lambda x: x % 2 == 0, nums))
+print(list(get))
+
+"""nums = [12, 5, 8, 15, 22, 3, 18]
+
+👉 Shuni list comprehension bilan qil:
+
+🎯 Shartlar:
+faqat juft sonlarni ol
+faqat 10 dan katta bo‘lsin
+har birini kvadratga oshir (x²)
+natijani listda qaytar
+🔥 Kutilayotgan natija
+[144, 484, 324]
+"""
+nums = [12, 5, 8, 15, 22, 3, 18]
+
+result = [x * x for x in nums if x % 2 == 0 and x > 10]
+print(result)
