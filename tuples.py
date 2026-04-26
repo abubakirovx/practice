@@ -62,7 +62,7 @@ print(result1)
 print(result2)
 
 
-def person(**kwargs):
+def person(**kwargs):  # **kwargs => nomlangan argumentlar
     return kwargs
 
 
@@ -83,7 +83,7 @@ print(type(result6))
 
 print("====== ZIP ========")  # index bilan tartiblaydi
 
-tuple1 = (1, 2, 3, 4)
+tuple1 = (1, 2, 3, 4, 3, 1)
 tuple2 = ("a", "b", "c")
 
 zipped = zip(tuple1, tuple2)
@@ -91,3 +91,6 @@ print(zipped)  # list qilmaguncha manzil ko'rsatiladi 0x0000017CCA21EBC0>
 result10 = list(zipped)
 print(result10)
 print(type(result10))
+
+new_set = set(tuple1)
+print(new_set)
