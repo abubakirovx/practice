@@ -35,3 +35,12 @@ cars = [
 
 list_cars = [car[0] for car in cars if car[1] > 80]  # b version
 print("Cars which  are older than 80 years =>", list_cars)
+
+print("======= set and dictionary comp =========")
+numbs = [3, 12, 54, 3, 5, 8, 91, 5]
+set_numbs = {*numbs}
+print(set_numbs)
+
+# dictionary comp => {index:value}
+dict_people = {person[0]: person[1] for person in people}  # b version
+print(dict_people)
