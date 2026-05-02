@@ -1,4 +1,4 @@
-// TASK A
+ // TASK A
 
 // function countNumber (word){
 //     let countedNumber=0
@@ -122,10 +122,56 @@ console.log(result1);
 Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 MASALAN: getReverse("hello") return qilsin "olleh"*/
 
-function getReverse(string){
-       let result= string.split("").reverse().join("")
-       return result
+// function getReverse(string){
+//        let result= string.split("").reverse().join("")
+//        return result
+// }
+
+// const result =getReverse("hello")
+// console.log(result);
+
+
+/*F-TASK (NodeJS)
+
+Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+MASALAN: getReverse("hello") return true return qiladi*/
+
+// function getDuplicate (text){
+//     arr=text.split("").sort()
+  
+    
+//     for(let i=0;i<arr.length;i++){
+       
+        
+//         if(arr[i]==arr[i+1]){
+//             return true
+//         }
+        
+       
+//     }
+//     return false
+// }
+
+// const result=getDuplicate("aabcd")
+// console.log(result);
+
+
+
+/*H-TASK (NodeJS)
+
+shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin
+MASALAN: getPositive([1, -4, 2]) return qiladi "12"
+*/
+
+function getPositive(arr){
+    let stringArr=''
+    for (let i=0;i<arr.length;i++) {
+       if(arr[i]>0){
+          stringArr+=String(arr[i])
+       }
+    }
+    return stringArr
 }
 
-const result =getReverse("hello")
-console.log(result);
+const stringArr = getPositive([1,2,3,-4,-5,6])
+console.log(typeof(stringArr),"=>",stringArr);

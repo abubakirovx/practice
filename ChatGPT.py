@@ -174,7 +174,7 @@ def richBankAtm():
             print("Invalid option ❌")
 
 
-richBankAtm()
+# richBankAtm()
 
 nums = [10, 15, 20, 25, 30]
 find = map(lambda x: x * 2, filter(lambda x: x > 20, nums))
@@ -200,3 +200,11 @@ nums = [12, 5, 8, 15, 22, 3, 18]
 
 result = [x * x for x in nums if x % 2 == 0 and x > 10]
 print(result)
+
+people = [("Robert", 20), ("Steve", 19), ("Joseph", 25)]
+
+peoples=[person[0] for person in people]
+print(peoples)
+
+people_age=[person[1] for person in people if person[1]>20]
+print(people_age)

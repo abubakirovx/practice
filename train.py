@@ -24,13 +24,14 @@
 #         arr += i
 
 #     arr.reverse()
+#     arr= "".join(arr)
 #     return arr
 
 
 # result = getReverse(input("Enter word you want to reverse=>"))
 # print(result)
 
-
+"""
 def richBankAtm():
     balance = 0
     print("Welcome to RBA (Rich Bank ATM) 🏦")
@@ -92,4 +93,39 @@ def richBankAtm():
         print("Wrong number ❌ try again ! ")
 
 
-richBankAtm()
+# richBankAtm()
+"""
+
+# def get_max_index(arr):
+#     if not arr:
+#         return -1
+#     max_num = float("-inf")
+#     max_index = 0
+#     for index, value in enumerate(arr):
+#         if value > max_num:
+#             max_num = value
+#             max_index = index
+#     return max_index
+
+
+# max_index = get_max_index([9, 2, 3, 2, 4, 7, 1, 3])
+# print(max_index)
+
+
+""" H-TASK (NodeJS)
+
+shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin
+MASALAN: getPositive([1, -4, 2]) return qiladi "12" 
+"""
+
+
+def get_positive(arr):
+    positive = [str(x) for x in arr if x > 0]
+    result = "".join(positive)
+    return result
+
+
+positive_arr = get_positive([1, 2, 3, -4, 5, -7, 8])
+print(type(positive_arr),'=>',positive_arr)
+
+
