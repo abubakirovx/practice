@@ -163,15 +163,50 @@ shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul 
 MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 */
 
-function getPositive(arr){
-    let stringArr=''
-    for (let i=0;i<arr.length;i++) {
-       if(arr[i]>0){
-          stringArr+=String(arr[i])
-       }
+// function getPositive(arr){
+//     let stringArr=''
+//     for (let i=0;i<arr.length;i++) {
+//        if(arr[i]>0){
+//           stringArr+=String(arr[i])
+//        }
+//     }
+//     return stringArr
+// }
+
+// const stringArr = getPositive([1,2,3,-4,-5,6])
+// console.log(typeof(stringArr),"=>",stringArr);
+
+
+
+// J-TASK (NodeJS)
+
+// Shunday function yozing, u parametridagi array ichida eng kop takrorlangan raqamni topib qaytarsin.
+// MASALAN: majorityElement([1,2,3,4,5,4,3,4]) return 4
+
+function majorityElement(arr){
+    const arrS=[...arr].sort((a, b) => a - b)
+   
+    let checkingNumber=arrS[0]
+    let count=1
+    let Maxcount=1
+    for(let i = 1;i<arr.length;i++){
+    
+        if(arrS[i]===arrS[i-1]){
+            count++
+            
+        }else {
+            count=1
+        }
+            if(count>Maxcount) {
+                Maxcount=count
+                checkingNumber=arrS[i]
+            }
+                
     }
-    return stringArr
+    return  checkingNumber
 }
 
-const stringArr = getPositive([1,2,3,-4,-5,6])
-console.log(typeof(stringArr),"=>",stringArr);
+const result = majorityElement([1,1,2,2,2,3,3,3,3])
+console.log(result)
+
+

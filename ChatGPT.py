@@ -203,8 +203,8 @@ print(result)
 
 people = [("Robert", 20), ("Steve", 19), ("Joseph", 25)]
 
-peoples=[person[0] for person in people]
+peoples = [person[0] for person in people]
 print(peoples)
 
-people_age=[person[1] for person in people if person[1]>20]
+people_age = [person[1] for person in people if person[1] > 20]
 print(people_age)

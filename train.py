@@ -119,13 +119,29 @@ MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 """
 
 
-def get_positive(arr):
-    positive = [str(x) for x in arr if x > 0]
-    result = "".join(positive)
-    return result
+# def get_positive(arr):
+#     positive = [str(x) for x in arr if x > 0]
+#     result = "".join(positive)
+#     return result
 
 
-positive_arr = get_positive([1, 2, 3, -4, 5, -7, 8])
-print(type(positive_arr),'=>',positive_arr)
+# positive_arr = get_positive([1, 2, 3, -4, 5, -7, 8])
+# print(type(positive_arr),'=>',positive_arr)
 
 
+'''I-TASK (PYTHON)
+
+Shunday function tuzing, unga string argument pass bolsin. Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
+MASALAN: get_digits("m14i1t") return qiladi "141"  '''
+
+
+def get_digit(text):
+    num=''
+    for letter in text:
+        if letter.isdigit():
+            num += letter
+    return num
+
+
+result = get_digit("s1al3om23hayi4r")
+print(type(result),result)
